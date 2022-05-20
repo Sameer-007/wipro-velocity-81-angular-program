@@ -1,0 +1,26 @@
+<div>
+    <h1>Data Binding In Angular</h1>
+</div>
+<div>
+    <h1>Interploation</h1>
+    <h2>{{title}}</h2>
+    <h3>{{message}}</h3>
+    <h3>{{employee.name}}</h3>
+    <h3>{{employee.salary}}</h3>
+</div>
+<div>
+    <h1>One Way : Property Binding</h1>
+    <img [src]="imageLocation">
+</div>
+
+
+<div>
+    <h1>Event Binding</h1>
+    <button (click)="getMessage()">Click</button>
+</div>
+
+<div>
+    <h1>Two Way Data Binding</h1>
+    <label for="">Enter Name</label>
+    <input type="text" [(ngModel)]="username"> <br> {{username}}
+</div>
