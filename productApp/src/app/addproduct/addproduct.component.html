@@ -1,0 +1,27 @@
+<!-- Template Driven Forms  - Two Way DataBinding -->
+<!-- import FormsModule in app.module.ts -->
+<div>
+
+    <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+
+        <div>
+            <label for="pname">Name</label>
+            <input type="text" name="name" ngModel>
+        </div>
+        <div>
+            <label for="pprice">Price</label>
+            <input type="text" name="price" ngModel>
+
+        </div>
+        <div>
+            <label for="pquantity">Quantity</label>
+            <input type="text" name="quantity" ngModel>
+        </div>
+
+        <div>
+            <input type="submit" value="Add">
+        </div>
+
+    </form>
+
+</div>
