@@ -1,1 +1,29 @@
-<app-addproduct></app-addproduct>
+<!-- <app-addproduct></app-addproduct> -->
+
+<app-child [item]="msgFromParent" (msgFromChild)="display($event)"></app-child>
+
+<h1>{{abc}}</h1>
+
+<div [ngStyle]="colorChange">
+    <p>NgStyle</p>
+</div>
+
+<div *ngIf="productList.length == 0">
+    <h3>List is Empty</h3>
+</div>
+
+<div *ngIf="productList.length > 0">
+
+    <ul *ngFor="let product of productList;let i=index;">
+        <li [ngClass]="{
+            'first' : product.id == 101,
+            'second' : product.id == 102 }">
+            {{i+1}}=>{{product.id}} {{product.name}} {{product.price}}
+        </li>
+    </ul>
+</div>
+<hr>
+
+<div appHighlight>
+    <p>Change the appearance or behavior of DOM elements and Angular components with attribute directives.</p>
+</div>
