@@ -1,0 +1,15 @@
+{
+    "books": [{
+            "id": 101,
+            "name": "Java Programming",
+            "price": 250,
+            "author": "Willam"
+        },
+        {
+            "id": 102,
+            "name": "Python Programming",
+            "price": 300,
+            "author": "Karthick"
+        }
+    ]
+}

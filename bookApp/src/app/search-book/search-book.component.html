@@ -1,0 +1,22 @@
+<div class="container">
+
+    <form [formGroup]="searchForm" (submit)="getData()">
+
+        <div class="form-group">
+            <label for="bookId">Enter Book  Id To Search</label>
+            <input id="bookId" class="form-control" type="text" formControlName="bookId">
+        </div>
+        <div class="form-group">
+            <input id="my-input" class="btn btn-primary" type="submit" value="Submit">
+        </div>
+
+    </form>
+
+</div>
+
+<div class="container">
+
+    {{book.id}} {{book.name}} {{book.price}}{{book.author}}
+
+
+</div>
