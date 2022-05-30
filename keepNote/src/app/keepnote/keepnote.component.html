@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Keep Note App</h2>
+    <form [formGroup]="keepNoteForm" (submit)="postNotes()">
+        <div class="form-group">
+            <label for="title">UserName</label>
+            <input id="title" class="form-control" type="text" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="description">Password</label>
+            <input id="description" class="form-control" type="text" formControlName="description">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Add a note">
+        </div>
+    </form>
+    <div class="grid">
+
+        <div class="card" *ngFor="let note of KeepNoteList">
+            <div class="card-body">
+                <h5 class="card-title">{{note.title}}</h5>
+                <p class="card-text">{{note.description}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
