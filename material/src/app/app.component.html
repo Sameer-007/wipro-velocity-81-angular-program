@@ -2,7 +2,7 @@
     <p>
         <mat-toolbar color="primary">
             <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon  (click)="drawer.toggle()">menu</mat-icon>
+      <mat-icon>menu</mat-icon>
     </button>
             <span>My App</span>
             <span class="example-spacer"></span>
@@ -15,7 +15,11 @@
         </mat-toolbar>
     </p>
 
-    <mat-drawer-container class="example-container" autosize>
+    <app-studio-upload></app-studio-upload>
+    <app-video-content></app-video-content>
+
+
+    <!-- <mat-drawer-container class="example-container" autosize>
         <mat-drawer #drawer class="example-sidenav" mode="side">
             <p>Auto-resizing sidenav</p>
             <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
@@ -23,7 +27,7 @@
      <mat-icon>favorite</mat-icon>
     </button>
         </mat-drawer>
-    </mat-drawer-container>
+    </mat-drawer-container> -->
 
 </div>
 

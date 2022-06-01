@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- Template Driven Form - Directive ngForm -->
+    <form (submit)="submitForm(videoForm)" #videoForm="ngForm">
+        <div class="form-group">
+            <label for="url">Video Url</label>
+            <input id="url" class="form-control" type="text" name="url" minlength="5" required [(ngModel)]="video.url" #url="ngModel">
+            <span *ngIf="url.invalid && (url.dirty || url.touched)" class="error-message">
+                     <p *ngIf="url.errors?.['required']">
+                          URl is required     
+                      </p>
+                      <p *ngIf="url.errors?.['minlength']">
+                              Url  must be atleast 5 Character
+                      </p>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="title">Video Title</label>
+            <input id="title" class="form-control" type="text" name="title" minlength="5" maxlength="120" required [(ngModel)]="video.title" #title="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Audience Type</label>
+            <div class="form-check">
+                <input id="" ngModel class="form-check-input" type="radio" name="audience" value="Yes,its made for Kids" [(ngModel)]="video.type">
+                <label for="" class="form-check-label">Yes,its made for Kids</label>
+            </div>
+            <div class="form-check">
+                <input id="my-input" ngModel class="form-check-input" type="radio" name="audience" value="Not for kids" [(ngModel)]="video.type">
+                <label for="my-input" class="form-check-label">Not for kids</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <input id="my-input" class="btn btn-primary" type="submit" [disabled]="!videoForm.valid">
+        </div>
+    </form>
+
+    {{videoForm.value | json}} <br> {{videoForm.status | json}}
+
+
+</div>
