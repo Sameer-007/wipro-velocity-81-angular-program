@@ -1,0 +1,32 @@
+<div class="container">
+    <h3> Studio-LiveStream Component</h3>
+    <form [formGroup]="liveStreamForm" (submit)="onSubmitLiveStream()">
+        <div class="form-group">
+            <label for="eventTtile">Livestream Event Title</label>
+            <input matInput id="eventTitle" class="form-control" type="text" formControlName="eventTitle" maxlength="100" required>
+            <span *ngIf="liveStreamForm.controls['eventTitle'].errors?.['invalidString']">
+                Minimum Charater should be more than 2
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="eventStartDate ">Event start date</label>
+            <input matInput id="eventStartDate " class="form-control" type="date" formControlName="eventStartDate" required>
+        </div>
+        <div class="form-group">
+            <label for="eventStartTime">Event start time</label>
+            <input matInput id="eventStartTime" class="form-control" type="time" formControlName="eventStartTime" required>
+        </div>
+
+        <div class="form-group">
+            <label for="eventDetails">Event Details</label>
+            <input matInput id="eventDetails" class="form-control" type="text" formControlName="eventDetails" required>
+        </div>
+
+        <div class="form-group">
+            <input mat-button color="primary" type="submit" value="Submit">
+        </div>
+
+    </form>
+
+</div>
