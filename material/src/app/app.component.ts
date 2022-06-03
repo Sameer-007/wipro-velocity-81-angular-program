@@ -16,6 +16,9 @@ export class AppComponent {
 
   showFiller = false;
 
+  addMessahe() {
+    alert('Typscript -  Behaviour')
+  }
 
 
 }

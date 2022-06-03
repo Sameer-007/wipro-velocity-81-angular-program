@@ -7,6 +7,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 
@@ -17,13 +19,15 @@ import { StudioUploadComponent } from './studio-upload/studio-upload.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideoContentComponent } from './video-content/video-content.component';
 import { StudioLivestreamComponent } from './studio-livestream/studio-livestream.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudioUploadComponent,
     VideoContentComponent,
-    StudioLivestreamComponent
+    StudioLivestreamComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { StudioLivestreamComponent } from './studio-livestream/studio-livestream
     FormsModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTabsModule
 
   ],
   providers: [],

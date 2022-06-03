@@ -5,6 +5,13 @@
       <mat-icon>menu</mat-icon>
     </button>
             <span>My App</span>
+
+            <nav mat-tab-nav-bar>
+                <a mat-tab-link routerLink="/video-content">Video Content</a>
+                <a mat-tab-link routerLink="/studio-upload">Studio Upload</a>
+                <a mat-tab-link routerLink="/stdio-live">Stdio Live</a>
+            </nav>
+
             <span class="example-spacer"></span>
             <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
@@ -15,10 +22,10 @@
         </mat-toolbar>
     </p>
 
-    <app-studio-upload></app-studio-upload>
+    <!-- <app-studio-upload></app-studio-upload>
     <app-video-content></app-video-content>
     <hr>
-    <app-studio-livestream></app-studio-livestream>
+    <app-studio-livestream></app-studio-livestream> -->
 
 
     <!-- <mat-drawer-container class="example-container" autosize>

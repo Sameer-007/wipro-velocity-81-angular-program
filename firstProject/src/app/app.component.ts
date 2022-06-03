@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Welcome to Angular Project';
   message = "Angular is Single Page Application(SPA)"
+  dateOfJoining = new Date(2020, 6, 3);
 
   employee = {
     name: 'Siva K',
@@ -19,6 +20,7 @@ export class AppComponent {
 
   username: string = "Vijay"
   getMessage() {
+
     alert("Button Clicked")
   }
   // Take a Break

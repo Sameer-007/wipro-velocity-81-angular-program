@@ -1,11 +1,21 @@
 <div class="container">
-    <div class="card" *ngFor="let x of updatedVideoList;">
-        <div class=" card-body ">
-            <h5 class="card-title ">
-                <p>{{x.title}}</p>
-            </h5>
-            <p class="card-text ">{{x.url}}</p>
-            <p class="card-text ">{{x.type}}</p>
+    <div class="form-group">
+        <label for="my-input">Enter Id to Search Video</label>
+        <input id="my-input" class="form-control" type="text" name="" #key>
+        <button (click)="getData(key.value)"> Search</button>
+    </div>
+    <div *ngIf="updatedVideoList.length ==0">
+        No Video Found
+    </div>
+    <div *ngIf="updatedVideoList.length >0">
+        <div class="card" *ngFor="let x of updatedVideoList;">
+            <div class=" card-body ">
+                <h5 class="card-title ">
+                    <p>{{x.title}}</p>
+                </h5>
+                <p class="card-text ">{{x.url}}</p>
+                <p class="card-text ">{{x.type}}</p>
+            </div>
         </div>
     </div>
 </div>
