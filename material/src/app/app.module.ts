@@ -20,6 +20,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideoContentComponent } from './video-content/video-content.component';
 import { StudioLivestreamComponent } from './studio-livestream/studio-livestream.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { LoginAuthGuard } from './services/login-auth-guard.guard';
+import { AuthentaicationService } from './services/auth.service';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { VendorLoginComponent } from './vendor-login/vendor-login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     StudioUploadComponent,
     VideoContentComponent,
     StudioLivestreamComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    AdminLoginComponent,
+    VendorLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatTabsModule
 
   ],
-  providers: [],
+  providers: [LoginAuthGuard, AuthentaicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

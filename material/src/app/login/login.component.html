@@ -1,0 +1,28 @@
+<!-- <nav class="nav">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="../admin-login">Admin Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="../vendor-login">Vendor Login</a>
+    </li>
+</nav>
+<router-outlet>
+
+</router-outlet> -->
+
+<div class="container">
+    <form [formGroup]="loginForm" (submit)="loginUser()">
+        <div class="form-group">
+            <label for="my-input">Username</label>
+            <input id="my-input" class="form-control" type="text" formControlName="username">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Password</label>
+            <input id="my-input" class="form-control" type="password" formControlName="password">
+        </div>
+        <div class="form-group">
+
+            <input class="btn btn-primary" type="submit" value="Login">
+        </div>
+    </form>
+</div>

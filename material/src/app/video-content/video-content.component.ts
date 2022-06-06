@@ -9,7 +9,6 @@ import { VideoService } from '../services/video.service';
   styleUrls: ['./video-content.component.css']
 })
 export class VideoContentComponent implements OnInit {
-
   updatedVideoList: any = []
   // http://localhost:4200/video-content/101
   constructor(private service: VideoService,
